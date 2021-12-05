@@ -1,16 +1,49 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <title>Hello, world!</title>
+        <title>Crypto Data Visualizer!</title>
     </head>
     <body>
-        <h1>Hello, world!</h1>
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/crypto/">CRYPTO DATA VISUALIZER</a>
+        </nav>
+       
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form  method='POST' >
+                        {% csrf_token %}
+                        <div class="card mt-5">
+                            <div class="row form-outline mb-4 mt-5 mx-auto">
+                                <label for="sel1">Select crypto:</label>
+                                <select class="form-control" name="selectedCoin" id="sel1">
+                                    <option name="Binance" value="Binance">Binance</option>
+                                    <option name="Bitcoin" value="Bitcoin">Bitcoin</option>
+                                    <option name="Cardano" value="Cardano">Cardano</option>
+                                    <option name="Ethereum" value="Ethereum">Ethereum</option>
+                                    <option name="Polkadot" value="Polkadot">Polkadot</option>
+                                    <option name="Solana" value="Solana">Solana</option>
+                                    <option name="Terra" value="Terra">Terra</option>
+                                    <option name="Tether" value="Tether">Tether</option>
+                                    <option name="USD_Coin" value="USD_Coin">USD_Coin</option>
+                                    <option name="XRP" value="XRP">XRP</option>
+                                </select>
+                            </div>                                
+                            <div class="form-outline mx-auto">
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Visualize</button>
+                            </div>                            
+                        </div>
+                    </form>
+                    <div class="row d-flex justify-content-center flex-nowrap">
+                        <a href="/visualizer/"  class="link-primary">Try general Visualizer</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
     </body>
 </html>
