@@ -17,6 +17,7 @@
 
         <div class="container-fluid d-flex bd-highlight mt-5">
 
+            <!--div dataset upload and option selection form -->
             <div class="p-2 flex-fill bd-highlight">
                 <form method='POST' class="form " enctype="multipart/form-data">
                     {% csrf_token %}
@@ -52,12 +53,14 @@
                 </form>
             </div>
 
+            <!--div containing generated chart -->
             <div class="p-2 flex-fill bd-highlight">
                 <canvas id="myChart" ></canvas>
             </div>
             
         </div>
 
+        <!--chart js script -->
         <script>
             const ctx = document.getElementById('myChart').getContext('2d');
 

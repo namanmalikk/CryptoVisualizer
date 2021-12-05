@@ -14,6 +14,7 @@
         </nav>
         <div class="container">
         
+            <!--this div contain peak and min price card -->
             <div class="row mt-3">
                 <div class="col">
                     <div class="card border-danger mx-sm-1 p-2">
@@ -30,16 +31,18 @@
             </div>
                 
             
-
+            <!--this div contain date vs price chart -->
             <div class='container-fluid mt-4' style="float: left;height:=400px;width: 100%;  ">
                 <canvas id="myChart1" style="height: 400px;"></canvas>
             </div>
             
+            <!--this div contain average price corresponding to each year -->
             <div class='container-fluid mt-5 mb-4' style="float: left;height:=400px;width: 100%;  ">
                 <canvas id="myChart2" style="height: 400px;"></canvas>
             </div>
         </div>
 
+        <!--chart js script -->
         <script>
             const x_features1 = [{% for i in daily_dates %} {{i}}, {% endfor %}]
             const y_features1 = [{% for i in daily_price %} {{i}}, {% endfor %}]
