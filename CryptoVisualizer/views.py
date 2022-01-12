@@ -16,7 +16,7 @@ def cryptoDetail(request, pk):
     coin_name = pk
 
     # this is the dataset url of recieved coin_name
-    url = f"C:\\Users\\naman\\Desktop\\DS-Project\\DSDashboard\\Datasets\\{coin_name}.csv"
+    url = f"C:\\Users\\naman\\Desktop\\DSDashboard\\Datasets\\{coin_name}.csv"
 
     # dataset corresponding to particular coin_name is read from url and converted to dataframe
     df = pd.read_csv(url)
