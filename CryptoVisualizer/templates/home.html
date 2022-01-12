@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title>Crypto Data Visualizer!</title>
+        <title>Cryptocurrency Data Visualizer!</title>
     </head>
     <body>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="/crypto/">CRYPTO DATA VISUALIZER</a>
+            <a class="navbar-brand" href="/crypto/">CRYPTOCURRENCY DATA VISUALIZER</a>
         </nav>
        
         <div class="container">
@@ -21,7 +21,7 @@
                         {% csrf_token %}
                         <div class="card mt-5">
                             <div class="row form-outline mb-4 mt-5 mx-auto">
-                                <label for="sel1">Select crypto:</label>
+                                <label for="sel1">Select Cryptocurrency:</label>
                                 <select class="form-control" name="selectedCoin" id="sel1">
                                     <option name="Binance" value="Binance">Binance</option>
                                     <option name="Bitcoin" value="Bitcoin">Bitcoin</option>
@@ -45,6 +45,7 @@
                     <div class="row d-flex justify-content-center flex-nowrap">
                         <a href="/visualizer/"  class="link-primary">Try general Visualizer</a>
                     </div>
+                    
                 </div>
             </div>
         </div>  

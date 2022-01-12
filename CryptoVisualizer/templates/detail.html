@@ -14,7 +14,7 @@
         </nav>
         <div class="container">
         
-            <!--this div contain peak and min price card -->
+            <!--this div contain peak price and min price card -->
             <div class="row mt-3">
                 <div class="col">
                     <div class="card border-danger mx-sm-1 p-2">
@@ -49,7 +49,7 @@
             const ctx1 = document.getElementById('myChart1').getContext('2d');
                 
             const config1 = {
-                type:'line',
+                type:'bar',
                 data:{
                     labels:x_features1,
                     datasets:[
@@ -58,14 +58,6 @@
                             data:y_features1,
                             borderColor: 'rgba(255,0,0,1)',
                             backgroundColor: 'rgba(255,0,0,0.8)',
-                            stack: 'combined',
-                            type: 'bar',
-                        },
-                        {
-                            label:'priceData',
-                            data:y_features1,
-                            borderColor: 'rgba(0,0,255,1)',
-                            stack: 'combined',
                         }
                     ],
                 },
@@ -76,17 +68,11 @@
                     plugins:{
                         legend:{
                             display:false,
-                            position: 'top',
                         },
                         title: {
                             display: true,
                             text: 'Date vs Price',
                         }
-                    },
-                    scales:{
-                        y: {
-                            stacked : true,
-                        },
                     },
                 },
             }
@@ -125,7 +111,7 @@
                     }],
                 },
                 options: {
-                    indexAxis: 'y',
+                    indexAxis: 'x',
                     elements:{
                         bar:{
                             borderWidth: 2,
